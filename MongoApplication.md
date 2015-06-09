@@ -8,10 +8,10 @@ use library
 show collections
 db.authors.insert({name: “John”, age: “37”})
 db.authors.insert({name: “Jane”, age: “42”, books: []})
-var author = db.authors.find({age: 
+var author = db.authors.find({age:{$gte { 
 db.authors.find()
 db.authors.find({name: “John”},{name: 1})
-db.authors.findOne()
+db.authors.findOne({})
 db.authors.find({$ne:{name: “John"}})
 db.authors.update({name: “John”},{name: “James”})
 db.authors.update({name: “James”}, {$set:{name: “John, age: “37"}})
